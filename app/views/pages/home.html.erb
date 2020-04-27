@@ -1,2 +1,48 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner-home mb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 banner-content">
+        <h1>Vos projets sur mesures avec un travail d'artisan</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam accusantium similique consequuntur laboriosam, esse perspiciatis culpa velit excepturi sed mollitia accusamus minima, explicabo eos saepe ratione, voluptate nisi nulla cum.</p>
+        <%= link_to "Devis gratuit", "#", class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row mb-5 mr-3 ml-3">
+    <div class="col-md-3 business-spec">
+      <img src="../assets/images/001-steel.png" alt="">
+      <h2>Conception<br>artisanale</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+    <div class="col-md-3 business-spec">
+      <img src="../assets/images/004-ruler.png" alt="">
+      <h2>Réalisation<br>sur mesure</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+    <div class="col-md-3 business-spec">
+      <img src="../assets/images/002-crown.png" alt="">
+      <h2>Service<br>de qualité</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+    <div class="col-md-3 business-spec">
+      <img src="../assets/images/003-help.png" alt="">
+      <h2>Conseils<br>personnalisés</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="categorie-tiles">
+    <% @categories.each do |categorie| %>
+      <%= link_to category_path(categorie) do %>
+        <div class="tile">
+          <h2 class="titre"><%= categorie.titre %></h2>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
