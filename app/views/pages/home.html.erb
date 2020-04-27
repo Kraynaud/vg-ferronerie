@@ -10,39 +10,96 @@
   </div>
 </div>
 <div class="container-fluid">
-  <div class="row mb-5 mr-3 ml-3">
+  <div class="row mb-5 pt-4 mr-4 ml-4">
     <div class="col-md-3 business-spec">
-      <img src="../assets/images/001-steel.png" alt="">
+      <%= image_tag ("/assets/001-steel.png"), class: "img-responsive mb-3"%>
       <h2>Conception<br>artisanale</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
     <div class="col-md-3 business-spec">
-      <img src="../assets/images/004-ruler.png" alt="">
+      <%= image_tag ("/assets/004-ruler.png"), class: "img-responsive mb-3"%>
       <h2>Réalisation<br>sur mesure</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
     <div class="col-md-3 business-spec">
-      <img src="../assets/images/002-crown.png" alt="">
+      <%= image_tag ("/assets/002-crown.png"), class: "img-responsive mb-3"%>
       <h2>Service<br>de qualité</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
     <div class="col-md-3 business-spec">
-      <img src="../assets/images/003-help.png" alt="">
+      <%= image_tag ("/assets/003-help.png"), class: "img-responsive mb-3"%>
       <h2>Conseils<br>personnalisés</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
   </div>
 </div>
-
-
-<div class="container">
-  <div class="categorie-tiles">
-    <% @categories.each do |categorie| %>
-      <%= link_to category_path(categorie) do %>
-        <div class="tile">
-          <h2 class="titre"><%= categorie.titre %></h2>
+<hr class="mb-5">
+<div class="container artisan-presentation">
+  <div class="row mb-5 pt-4 pb-4 mr-3 ml-3">
+    <div class="col-md-6 presentation">
+      <h2 class="mb-3">L'artisan, du dessin à la conception</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit at corrupti iusto amet quam doloremque ipsam illo, quo dolore quidem culpa qui. Distinctio iusto magnam eos velit dolor. Odit, reprehenderit.</p>
+      <%= image_tag ("/assets/logo-artisan.png"), class: "img-responsive mb-3 mt-3"%>
+    </div>
+    <div class="col-md-6">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <%= image_tag ("https://images.unsplash.com/photo-1531220674280-b18cf8650cf3?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"), class: "parallax d-block w-100"%>
+          </div>
+          <div class="carousel-item">
+            <%= image_tag ("https://images.unsplash.com/photo-1533369257659-6132475f793c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=654&q=80"), class: "parallax d-block w-100"%>
+          </div>
+          <div class="carousel-item">
+            <%= image_tag ("https://images.unsplash.com/photo-1521493580600-41dedc446def?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80"), class: "parallax d-block w-100"%>
+          </div>
         </div>
-      <% end %>
-    <% end %>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
+<hr class="mb-5">
+<div class="container-fluid pr-5 pl-5">
+  <h2>Mes Réalisations</h2>
+  <div class="mt-5">
+  <% @categories.each do |categorie| %>
+    <div class="row">
+      <div class="tile mb-5 pr-5 pl-5">
+        <% if categorie.id.to_i % 2 == 0 %>
+          <div class="col-md-4 mr-3">
+            <%= image_tag ("https://images.unsplash.com/photo-1521026483550-6a1a67b2766b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"), class: "img-responsive m"%>
+          </div>
+          <div class="col-md-8 pl-4">
+            <h3><%= categorie.titre %></h3>
+            <p><%= categorie.description %></p>
+            <%= link_to 'Voir les créations', category_path(categorie), class: "btn btn-primary"%>
+          </div>
+        <% else %>
+          <div class="col-md-8 pr-5 pl-5">
+            <h3><%= categorie.titre %></h3>
+            <p><%= categorie.description %></p>
+            <%= link_to 'Voir les créations', category_path(categorie), class: "btn btn-primary"%>
+          </div>
+          <div class="col-md-4 ml-3">
+            <%= image_tag ("https://images.unsplash.com/photo-1521026483550-6a1a67b2766b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"), class: "img-responsive m"%>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
+
