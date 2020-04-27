@@ -1,23 +1,18 @@
-<div class="navbar-expand-sm navbar-light navbar">
-  <%= link_to "#", class: "navbar-brand" do %>
+<div class="navbar">
+  <%= link_to "#", class: "navbar-brand mb-3" do %>
     <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
   <% end %>
 
 
-  <div class="collapse navbar-collapse">
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <%= link_to "L'artisan", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Savoir-faire", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Realisations", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Contact", "#", class: "nav-link" %>
-        </li>
+  <div class="links">
+
+          <%= link_to "L'artisan", "#", class: "navbar-link" %>
+
+          <%= link_to "Savoir-faire", "#", class: "navbar-link" %>
+
+          <%= link_to "Realisations", "#", class: "navbar-link" %>
+
+          <%= link_to "Contact", "#", class: "navbar-link" %>
 
 <!--    <li class="nav-item dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

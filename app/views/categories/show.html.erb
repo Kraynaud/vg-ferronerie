@@ -2,11 +2,10 @@
   <h2><%= @categorie.titre %></h2>
   <p><%= @categorie.description %></p>
   <div class="cards">
-
     <% @realisations.each do |realisation| %>
-        <div class="realisation-card">
-          <h2 class="titre"><%= realisation.titre %></h2>
-        </div>
-      <% end %>
+    <div class="realisation-card">
+        <h2 class="titre"><%= realisation.titre %></h2>
+    </div>
+    <% end %>
   </div>
 </div>
