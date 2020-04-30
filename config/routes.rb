@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
+  ActiveAdmin.routes(self)
+  devise_for :users, :skip => :registration
   root to: 'pages#home'
   resources :contacts
   resources :realisations
