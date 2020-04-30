@@ -1,4 +1,5 @@
 .navbar {
+  border-bottom: solid 3px orange;
   justify-content: space-between;
   background: #575555;
   display: flex;
@@ -6,7 +7,7 @@
   align-items: center;
   height: auto;
   padding: 15px 50px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
 .links {
