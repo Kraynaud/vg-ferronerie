@@ -3,8 +3,4 @@ class PagesController < ApplicationController
   def home
     @categories = Categorie.all
   end
-
-  def contact
-
-  end
 end

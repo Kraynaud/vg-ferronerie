@@ -1,0 +1,12 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: beige;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.contact-photo {
+  height: auto;
+  width: auto;
+}
