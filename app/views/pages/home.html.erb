@@ -2,9 +2,11 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 banner-content">
-        <h1>Vos projets sur mesures avec un travail d'artisan</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam accusantium similique consequuntur laboriosam, esse perspiciatis culpa velit excepturi sed mollitia accusamus minima, explicabo eos saepe ratione, voluptate nisi nulla cum.</p>
-        <%= link_to "Devis gratuit", new_contact_path, class: "btn btn-primary" %>
+        <h1 style="font-size: 32px;">Vos projets sur mesures avec un travail d'artisan</h1>
+        <p class="text-justify mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam accusantium similique consequuntur laboriosam, esse perspiciatis culpa velit excepturi sed mollitia accusamus minima, explicabo eos saepe ratione, voluptate nisi nulla cum.</p>
+        <div class="text-right mt-4">
+          <%= link_to "Devis gratuit", new_contact_path, class: "btn-home" %>
+        </div>
       </div>
     </div>
   </div>
@@ -75,31 +77,21 @@
 <div class="container-fluid pr-5 pl-5 text-center">
   <h2>Mes Réalisations</h2>
   <div class="mt-5">
-  <% @categories.each do |categorie| %>
-    <div class="row">
-      <div class="tile mb-4 pr-5 pl-5">
-        <% if categorie.id.to_i % 2 == 0 %>
-          <div class="col-md-4 mr-3">
-            <%= image_tag ("https://images.unsplash.com/photo-1521026483550-6a1a67b2766b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"), class: "img-responsive m"%>
+    <div class="categorie-cards">
+    <% @categories.each do |categorie| %>
+     <%= link_to category_path(categorie) do %>
+      <div class="card" style="background-image: url(https://i.pinimg.com/564x/6f/5a/b1/6f5ab1b470beeeeaf285bb451c63ac8f.jpg); background-size:cover;">
+        <div class="overlay">
+          <div class = "items head ml-3">
+            <p><%= categorie.titre %></p>
+            <hr>
           </div>
-          <div class="col-md-8 pl-4 text-center">
-            <h3><%= categorie.titre %></h3>
-            <p><%= categorie.description %></p>
-            <%= link_to 'Voir les créations', category_path(categorie), class: "btn btn-primary"%>
-          </div>
-        <% else %>
-          <div class="col-md-8 pr-4 text-center">
-            <h3><%= categorie.titre %></h3>
-            <p><%= categorie.description %></p>
-            <%= link_to 'Voir les créations', category_path(categorie), class: "btn btn-primary"%>
-          </div>
-          <div class="col-md-4 ml-3">
-            <%= image_tag ("https://images.unsplash.com/photo-1521026483550-6a1a67b2766b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"), class: "img-responsive m"%>
-          </div>
-        <% end %>
+          <div class="mt-5"></div>
+        </div>
       </div>
+      <% end %>
+    <% end %>
     </div>
-  <% end %>
   </div>
 </div>
 

@@ -25,6 +25,8 @@
 }
 
 .realisation-card{
+  opacity: 0.8;
+  transition: transform 0.5s;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -32,8 +34,18 @@
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
+    .slide-in {
+      transform: translateX(30%);
+    }
+
+    .slide-in.active {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+
 .realisation-description{
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -45,10 +57,12 @@
   }
 }
 
-#real-carousel{
+.realisation-image{
   box-shadow: none;
-  width: 400px;
-  height: 400px;
+  img{
+    width: 600px;
+    height: auto;
+  }
 }
 
 // .banner-categorie-content {

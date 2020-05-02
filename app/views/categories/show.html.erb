@@ -2,84 +2,36 @@
 </div>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-10 offset-1 text-center p-5 mb-5 categorie-description">
+    <div class="col-md-10 offset-1 text-center p-4 mb-5 categorie-description">
       <h1><%= @categorie.titre %></h1>
       <p><%= @categorie.description %></p>
-      <%= image_tag ("/assets/logo-artisan.png"), class: "img-responsive mb-3 mt-3"%>
+      <%= image_tag ("/assets/logo-artisan.png"), class: "img-responsive mb-1 mt-2"%>
     </div>
 </div>
 <hr class="mb-5">
 <div class="container-fluid">
   <% @realisations.each do |realisation| %>
-    <div class="row">
-      <div class="col-md-10 offset-1 mb-5 realisation-card">
+    <div class="row p-5">
+      <div class="col-md-12 mb-2 realisation-card slide-in">
       <% if realisation.id.to_i % 2 == 0 %>
         <div class="realisation-description text-center p-5">
           <h2><%= realisation.titre %></h2>
           <h3><%= realisation.lieu %></h3>
           <p><%= realisation.description %></p>
+          <%= link_to "Voir galerie", realisation_path(realisation), class: "btn-home" %>
         </div>
-        <div class="realisation-gallery">
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" id="real-carousel">
-              <div class="carousel-item active">
-                <%= image_tag ("https://images.unsplash.com/photo-1531220674280-b18cf8650cf3?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"), class: "parallax d-block w-100"%>
-              </div>
-              <div class="carousel-item">
-                <%= image_tag ("https://images.unsplash.com/photo-1533369257659-6132475f793c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=654&q=80"), class: "parallax d-block w-100"%>
-              </div>
-              <div class="carousel-item">
-                <%= image_tag ("https://images.unsplash.com/photo-1521493580600-41dedc446def?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80"), class: "parallax d-block w-100"%>
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
+        <div class="realisation-image">
+          <%= image_tag ("https://images.unsplash.com/photo-1550078882-40713cd1a12f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1069&q=80")%>
         </div>
       <% else %>
-        <div class="realisation-gallery">
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" id="real-carousel">
-              <div class="carousel-item active">
-                <%= image_tag ("https://images.unsplash.com/photo-1531220674280-b18cf8650cf3?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"), class: "parallax d-block w-100"%>
-              </div>
-              <div class="carousel-item">
-                <%= image_tag ("https://images.unsplash.com/photo-1533369257659-6132475f793c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=654&q=80"), class: "parallax d-block w-100"%>
-              </div>
-              <div class="carousel-item">
-                <%= image_tag ("https://images.unsplash.com/photo-1521493580600-41dedc446def?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80"), class: "parallax d-block w-100"%>
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
+        <div class="realisation-image">
+          <%= image_tag ("https://images.unsplash.com/photo-1550078882-40713cd1a12f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1069&q=80")%>
         </div>
         <div class="realisation-description text-center p-5">
           <h2><%= realisation.titre %></h2>
           <h3><%= realisation.lieu %></h3>
           <p><%= realisation.description %></p>
+          <%= link_to "Voir galerie", realisation_path(realisation), class: "btn-home" %>
         </div>
       <% end %>
       </div>
