@@ -25,23 +25,12 @@
 }
 
 .realisation-card{
-  opacity: 0.8;
-  transition: transform 0.5s;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
-
-    .slide-in {
-      transform: translateX(30%);
-    }
-
-    .slide-in.active {
-      opacity: 1;
-      transform: translateX(0%);
-    }
 
 .realisation-description{
   display: flex;
@@ -60,7 +49,7 @@
 .realisation-image{
   box-shadow: none;
   img{
-    width: 600px;
+    width: 550px;
     height: auto;
   }
 }

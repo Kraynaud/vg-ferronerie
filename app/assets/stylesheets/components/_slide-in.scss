@@ -1,0 +1,34 @@
+.align-left {
+
+}
+
+.align-right {
+
+}
+
+.align-top {
+
+}
+
+.slide-in {
+  opacity: 0;
+  transition: all .8s;
+}
+
+.align-left.slide-in {
+  transform: translateX(-20%) scale(1);
+}
+
+.align-right.slide-in {
+  transform: translateX(20%) scale(1);
+}
+
+.align-top.slide-in {
+  transform: translateY(30%) scale(1);
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
+  transform: translateY(0%) scale(1);
+}
