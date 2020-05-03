@@ -97,3 +97,79 @@ a {
   width: 100%;
 }
 
+//cards
+
+.categorie-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+  a{
+    text-decoration: none;
+  }
+}
+
+//card
+
+.card {
+  width: auto;
+  height: 400px;
+  cursor: pointer;
+
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  }
+
+.overlay {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+
+  background: rgba(77, 77, 77, .9);
+  color: orange;
+  opacity: 0;
+  transition: all 0.5s;
+
+}
+
+.items {
+  padding-left: 20px;
+  letter-spacing: 3px;
+}
+
+.head {
+  text-align: left;
+  font-size: 30px;
+  line-height: 80px;
+
+  transform: translateY(40px);
+  transition: all 0.7s;
+  hr {
+    display: block;
+    width: 0;
+
+    border: none;
+    border-bottom: solid 2px orange;
+
+    position: absolute;
+    bottom: 0; left:20px;
+
+    transition: all .5s;
+  }
+}
+
+.card:hover .overlay {
+  opacity: 1;
+  & .head {
+    transform: translateY(0px);
+  }
+
+  & hr {
+    width: 200px;
+    transition-delay: 0.4s;
+  }
+}
+

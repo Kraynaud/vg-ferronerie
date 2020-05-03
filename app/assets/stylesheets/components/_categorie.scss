@@ -34,6 +34,7 @@
 
 .realisation-description{
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -45,10 +46,12 @@
   }
 }
 
-#real-carousel{
+.realisation-image{
   box-shadow: none;
-  width: 400px;
-  height: 400px;
+  img{
+    width: 550px;
+    height: auto;
+  }
 }
 
 // .banner-categorie-content {
