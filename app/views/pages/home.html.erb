@@ -14,22 +14,22 @@
 <div class="container-fluid">
   <div class="row mb-5 pt-4 mr-4 ml-4 align-top slide-in">
     <div class="col-md-3 business-spec">
-      <%= image_tag ("/assets/001-steel.png"), class: "img-responsive mb-3"%>
+      <%= image_tag ("https://res.cloudinary.com/dkrtmft3y/image/upload/v1588681048/001-steel_fwase1.png"), class: "img-responsive mb-3"%>
       <h2>Conception<br>artisanale</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
     <div class="col-md-3 business-spec">
-      <%= image_tag ("/assets/004-ruler.png"), class: "img-responsive mb-3"%>
+      <%= image_tag ("https://res.cloudinary.com/dkrtmft3y/image/upload/v1588681066/004-ruler_sklv1q.png"), class: "img-responsive mb-3"%>
       <h2>Réalisation<br>sur mesure</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
     <div class="col-md-3 business-spec">
-      <%= image_tag ("/assets/002-crown.png"), class: "img-responsive mb-3"%>
+      <%= image_tag ("https://res.cloudinary.com/dkrtmft3y/image/upload/v1588681051/002-crown_srkzvj.png"), class: "img-responsive mb-3"%>
       <h2>Service<br>de qualité</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
     <div class="col-md-3 business-spec">
-      <%= image_tag ("/assets/003-help.png"), class: "img-responsive mb-3"%>
+      <%= image_tag ("https://res.cloudinary.com/dkrtmft3y/image/upload/v1588681068/003-help_wiledz.png"), class: "img-responsive mb-3"%>
       <h2>Conseils<br>personnalisés</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
@@ -41,7 +41,7 @@
     <div class="col-md-6 presentation">
       <h2 class="mb-3">L'artisan, du dessin à la conception</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit at corrupti iusto amet quam doloremque ipsam illo, quo dolore quidem culpa qui. Distinctio iusto magnam eos velit dolor. Odit, reprehenderit.</p>
-      <%= image_tag ("/assets/logo-artisan.png"), class: "img-responsive mb-3 mt-3"%>
+      <%= image_tag ("https://res.cloudinary.com/dkrtmft3y/image/upload/v1588681058/logo-artisan_pef0jm.png"), class: "img-responsive mb-3 mt-3"%>
     </div>
     <div class="col-md-6">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -79,8 +79,8 @@
   <div class="mt-5">
     <div class="categorie-cards">
     <% @categories.each do |categorie| %>
-     <%= link_to category_path(categorie) do %>
-      <div class="card" style="background-image: url(https://i.pinimg.com/564x/6f/5a/b1/6f5ab1b470beeeeaf285bb451c63ac8f.jpg); background-size:cover;">
+    <%= link_to category_path(categorie) do %>
+      <div class="card" style="background-image: url('<%= cl_image_path categorie.photo.key, crop: :fit%>')">
         <div class="overlay">
           <div class = "items head ml-3">
             <p><%= categorie.titre %></p>

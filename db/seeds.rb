@@ -4,10 +4,11 @@ puts 'Destroy all database...'
 
 Realisation.destroy_all
 Categorie.destroy_all
+User.destroy_all
 
 puts 'Creating user...'
 
-user = User.new({email: "kraynaud@gmail.com", password: "password" })
+user = User.new({email: "kraynaud@gmail.com", password: "password", admin: true })
 user.save
 
 puts 'Creating some categories...'
