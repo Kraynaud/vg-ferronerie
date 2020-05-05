@@ -5,3 +5,7 @@ class CategoriesController < ApplicationController
     @realisations = Realisation.select {|realisation| realisation["categorie_id"].to_i == @categorie.id }
   end
 end
+
+def article_params
+  params.require(:categorie).permit(:titre, :description, :photo)
+end

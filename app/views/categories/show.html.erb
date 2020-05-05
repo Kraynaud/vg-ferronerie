@@ -1,19 +1,19 @@
-<div class="banner-categorie mb-5">
+<div class="banner-categorie mb-5", style="background-image: url('<%= cl_image_path @categorie.photo.key %>')">
 </div>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-10 offset-1 text-center p-4 mb-5 categorie-description">
+    <div class="col-md-10 offset-1 text-center p-4 mb-5 mt-3 categorie-description">
       <h1><%= @categorie.titre %></h1>
       <p><%= @categorie.description %></p>
-      <%= image_tag ("/assets/logo-artisan.png"), class: "img-responsive mb-1 mt-2"%>
+      <%= image_tag ("https://res.cloudinary.com/dkrtmft3y/image/upload/v1588681058/logo-artisan_pef0jm.png"), class: "img-responsive mb-1 mt-2"%>
     </div>
 </div>
 <hr class="mb-5">
 <div class="container-fluid">
-  <% @realisations.each do |realisation| %>
-    <div class="row p-5">
-      <% if realisation.id.to_i % 2 == 0 %>
-      <div class="col-md-12 realisation-card align-right slide-in">
+  <% @realisations.each_with_index do |realisation, index| %>
+    <div class="row pt-4 pb-4">
+      <% if index == 0 || index % 2 == 0 %>
+      <div class="col-md-10 offset-1 realisation-card align-right slide-in">
         <div class="realisation-description text-center p-5">
           <h2><%= realisation.titre %></h2>
           <h3><%= realisation.lieu %></h3>
@@ -21,13 +21,13 @@
           <%= link_to "Voir galerie", realisation_path(realisation), class: "btn-home" %>
         </div>
         <div class="realisation-image">
-          <%= image_tag ("https://images.unsplash.com/photo-1550078882-40713cd1a12f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1069&q=80")%>
+          <%= cl_image_tag realisation.pictures.first.photo.key, crop: :fill %>
         </div>
       </div>
       <% else %>
-      <div class="col-md-12 realisation-card align-left slide-in">
+      <div class="col-md-10 offset-1 realisation-card align-left slide-in">
         <div class="realisation-image">
-          <%= image_tag ("https://images.unsplash.com/photo-1550078882-40713cd1a12f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1069&q=80")%>
+          <%= cl_image_tag realisation.pictures.first.photo.key, crop: :fill %>
         </div>
         <div class="realisation-description text-center p-5">
           <h2><%= realisation.titre %></h2>

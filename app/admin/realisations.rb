@@ -1,15 +1,17 @@
 ActiveAdmin.register Realisation do
-  permit_params :titre, :description, :lieu, :categorie_id, :photos
+  permit_params :titre, :description, :lieu, :categorie_id, :pictures
 
   show do |realisation|
     attributes_table do
       row :titre
       row :description
       row :lieu
-      row :categorie_id
-      row :photos do
-        realisation.photos.each do |photo|
-          image_tag url_for(photo)
+      row :categorie_id do
+        realisation.categorie.titre
+      end
+      row :pictures do
+        realisation.pictures.each do |picture|
+          picture.photo
         end
       end
     end
@@ -20,11 +22,22 @@ ActiveAdmin.register Realisation do
       f.input :titre
       f.input :description
       f.input :lieu
-      f.input :categorie_id
-      f.input :photos, as: :file, input_html: { multiple: true }
+      f.collection_select(:categorie_id, Categorie.all, :id, :titre)
       f.submit
     end
   end
+
+  index do
+    selectable_column
+    column :id
+    column :titre
+    column :description
+    column :lieu
+    column :categorie
+    column :created_at
+    actions
+  end
+
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
@@ -39,5 +52,5 @@ ActiveAdmin.register Realisation do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-
 end
+
