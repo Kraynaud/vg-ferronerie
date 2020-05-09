@@ -1,6 +1,6 @@
-<div class="container">
-  <div class="row mt-5">
-    <div class="col-md-6 form">
+<div class="container-fluid">
+  <div class="row m-5 p-5">
+    <div class="col-md-7 form p-5">
       <h1 class="text-center mb-3">Me contacter</h1>
       <%= simple_form_for(@contact) do |f| %>
         <%= f.input :nom, :label => "Nom", required: true, autofocus: true %>
@@ -10,12 +10,12 @@
         <%= f.input :objet, :collection => @objets, :label => "Sélectionner un objet...", required: true %>
         <%= f.input :description, :label => "Décrivez votre demande", required: true %>
         <div class="text-center">
-          <%= f.submit "Envoyer", class: "btn-home"%>
+          <%= f.submit "Envoyer", class: "btn btn-primary mt-4"%>
         </div>
       <% end %>
     </div>
-    <div class="col-md-6 contact-photo">
-      <%= image_tag ("https://images.unsplash.com/photo-1531220674280-b18cf8650cf3?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"), class: "d-block w-100"%>
+    <div class="col-md-5 contact-photo">
+      <%= image_tag ("https://images.unsplash.com/photo-1531220674280-b18cf8650cf3?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"), class: "img-responsive d-block w-100"%>
     </div>
   </div>
 

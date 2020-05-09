@@ -1,0 +1,18 @@
+.real-specs {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  .specs{
+    flex: 1;
+    h2 {
+      color: #f77925;
+    }
+    p{
+      font-size: 1.2em;
+    }
+  }
+  img {
+    height: 250px;
+    width: auto;
+  }
+}

@@ -21,13 +21,13 @@
           <%= link_to "Voir galerie", realisation_path(realisation), class: "btn-home" %>
         </div>
         <div class="realisation-image">
-          <%= cl_image_tag realisation.pictures.first.photo.key, crop: :fill %>
+          <%= cl_image_tag realisation.pictures.first.photo.key, crop: :fill, class: "img-responsive" %>
         </div>
       </div>
       <% else %>
       <div class="col-md-10 offset-1 realisation-card align-left slide-in">
         <div class="realisation-image">
-          <%= cl_image_tag realisation.pictures.first.photo.key, crop: :fill %>
+          <%= cl_image_tag realisation.pictures.first.photo.key, crop: :fill, class: "img-responsive" %>
         </div>
         <div class="realisation-description text-center p-5">
           <h2><%= realisation.titre %></h2>
