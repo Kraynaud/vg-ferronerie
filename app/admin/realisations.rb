@@ -1,5 +1,5 @@
 ActiveAdmin.register Realisation do
-  permit_params :titre, :description, :lieu, :categorie_id, :pictures
+  permit_params :titre, :description, :lieu, :categorie_id, :pictures, :user_id
 
   show do |realisation|
     attributes_table do
@@ -19,10 +19,15 @@ ActiveAdmin.register Realisation do
 
   form do |f|
     f.inputs do
+      inputs 'Choisir categorie' do
+        f.collection_select(:user_id, User.all, :id, :email)
+      end
       f.input :titre
       f.input :description
       f.input :lieu
-      f.collection_select(:categorie_id, Categorie.all, :id, :titre)
+      inputs 'Choisir categorie' do
+        f.collection_select(:categorie_id, Categorie.all, :id, :titre)
+      end
       f.submit
     end
   end
