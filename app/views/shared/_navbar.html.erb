@@ -17,7 +17,11 @@
               <% end %>
             </div>
           </div>
-          <%= link_to "L'artisan", "#", class: "navbar-link" %>
+          <% if params[:action] == ('show') || current_page?(new_contact_path) %>
+            <%= link_to "L'artisan", root_path, class: "navbar-link" %>
+          <% else %>
+            <%= link_to "L'artisan", "#artisan", class: "navbar-link" %>
+          <% end %>
           <%= link_to "Contact", new_contact_path, class: "navbar-link" %>
 
     </ul>
