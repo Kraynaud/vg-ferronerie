@@ -1,6 +1,6 @@
 <div class="navbar">
   <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+    <%= image_tag "https://res.cloudinary.com/dkrtmft3y/image/upload/v1589285240/Logo-VGferronerie_bfrf9v.png", class: "img-responsive" %>
   <% end %>
 
 
@@ -17,7 +17,11 @@
               <% end %>
             </div>
           </div>
-          <%= link_to "L'artisan", "#", class: "navbar-link" %>
+          <% if params[:action] == ('show') || current_page?(new_contact_path) %>
+            <%= link_to "L'artisan", root_path, class: "navbar-link" %>
+          <% else %>
+            <%= link_to "L'artisan", "#artisan", class: "navbar-link" %>
+          <% end %>
           <%= link_to "Contact", new_contact_path, class: "navbar-link" %>
 
     </ul>
