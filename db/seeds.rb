@@ -9,7 +9,7 @@ User.destroy_all
 
 puts 'Creating user...'
 
-user = User.new({email: "vgferronneriecreation@gmail.com", password: "VGuiol2020Creation", admin: true })
+user = User.new({email: "kraynaud@gmail.com", password: "password", admin: true })
 user.save
 
 puts "#{User.count} user has been created !"
