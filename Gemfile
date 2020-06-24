@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.6.6'
 
+gem 'bootstrap', '~> 4.5.0'
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
@@ -18,7 +19,6 @@ gem 'webpacker'
 gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'cloudinary', '~> 1.12.0'
-gem 'carrierwave', '~> 2.0'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
