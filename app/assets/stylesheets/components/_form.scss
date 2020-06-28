@@ -1,4 +1,12 @@
+.contact-page{
+  display: flex;
+  flex-direction: row;
+}
+
 .form {
+  margin-right: 30px;
+  width: 50%;
+  padding: 25px;
   margin-top: 98px;
   display: flex;
   flex-direction: column;
@@ -23,5 +31,7 @@
 .contact-photo {
   margin-top: 98px;
   height: auto;
-  width: auto;
+  width: 50%;
 }
+
+
