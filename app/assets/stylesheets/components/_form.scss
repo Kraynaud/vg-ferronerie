@@ -1,37 +1,76 @@
-.contact-page{
-  display: flex;
-  flex-direction: row;
+@media screen and (min-width: 1024px) {
+  .contact-page {
+    display: flex;
+    flex-direction: row;
+
+    .form {
+      margin-right: 30px;
+      width: 60%;
+      padding: 25px;
+      margin-top: 110px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #575555;
+      font-weight: 600;
+      font-size: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+      #contact_description, #contact_objet, #contact_telephone, #contact_nom, #contact_prenom, #contact_email {
+        border: solid 1px #f77925;
+      }
+      h1{
+        color: #f77925;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 2rem;
+        letter-spacing: .15rem;
+      }
+    }
+
+    .contact-photo {
+      margin-top: 110px;
+      height: auto;
+      width: 40%;
+    }
+  }
 }
 
-.form {
-  margin-right: 30px;
-  width: 50%;
-  padding: 25px;
-  margin-top: 98px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #575555;
-  font-weight: 600;
-  font-size: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+@media screen and (max-width: 1024px) {
 
-  #contact_description, #contact_objet, #contact_telephone, #contact_nom, #contact_prenom, #contact_email {
-    border: solid 1px #f77925;
-  }
-  h1{
-    color: #f77925;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 2rem;
-    letter-spacing: .15rem;
-  }
-}
+  .contact-page {
+    display: flex;
+    flex-direction: column;
 
-.contact-photo {
-  margin-top: 98px;
-  height: auto;
-  width: 50%;
+    .form {
+      width: 100%;
+      padding: 25px;
+      margin-top: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #575555;
+      font-weight: 600;
+      font-size: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+      #contact_description, #contact_objet, #contact_telephone, #contact_nom, #contact_prenom, #contact_email {
+        border: solid 1px #f77925;
+      }
+      h1{
+        color: #f77925;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 2rem;
+        letter-spacing: .15rem;
+      }
+    }
+
+    .contact-photo {
+      display:none;
+      height:0%;
+    }
+  }
 }
 
 
