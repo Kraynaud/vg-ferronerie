@@ -242,4 +242,19 @@
   }
 }
 
+@media (max-width: 768px) {
+  .header .logo img{
+    display: block;
+    float: left;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    width: auto;
+
+    text-decoration: none;
+  }
+
+}
+
 
