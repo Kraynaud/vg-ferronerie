@@ -213,7 +213,7 @@
 
 /* 48em = 768px */
 
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
 
   .header li {
     visibility: visible !important;
@@ -241,9 +241,21 @@
     width: auto;
     margin: 20px 20px;
   }
+
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+  #dropdownMenuLink{
+    font-size: 1rem;
+  }
+
+  .header li a {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .header .logo img{
     display: block;
     float: left;
@@ -255,18 +267,8 @@
 
     text-decoration: none;
   }
-
-  #dropdownMenuLink{
-    font-size: 1rem;
-  }
-
-  .header li a {
-    padding: 10px 20px;
-    font-size: 1rem;
-
-  }
-
-
 }
+
+
 
 
