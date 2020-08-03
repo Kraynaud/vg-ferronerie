@@ -1,64 +1,58 @@
 <div class="banner-home mb-5">
   <div class="container">
     <div class="row">
-      <div class="col-md-8 banner-content">
+      <div class="col-md-8 col-sm-8 banner-content">
         <h1 style="font-size: 32px;">Vos projets sur mesures avec un travail d'artisan</h1>
-        <p class="text-justify mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam accusantium similique consequuntur laboriosam, esse perspiciatis culpa velit excepturi sed mollitia accusamus minima, explicabo eos saepe ratione, voluptate nisi nulla cum.</p>
+        <p class="text-justify mt-3">VG FERRONNERIE CREATION propose un éventail de réalisations selon votre demande. Garde Corps, verrières, pergolas, portes, portails, mobiliers et bien d’autres. L’acier se transforme... Une idée? VG FERRONNERIE peut créer pour vous les aménagements de vos envies.</p>
         <div class="text-right mt-4">
-          <%= link_to "Devis gratuit", new_contact_path, class: "btn-home" %>
+          <%= link_to "Devis gratuit", new_contact_path, class: "btn-home mt-3" %>
         </div>
       </div>
     </div>
   </div>
 </div>
 <div class="container-fluid">
-  <div class="row mb-5 pt-4 mr-4 ml-4 align-top slide-in">
-    <div class="col-md-3 business-spec">
-      <%= image_tag ("https://res.cloudinary.com/dkrtmft3y/image/upload/v1588681048/001-steel_fwase1.png"), class: "img-responsive mb-3"%>
+  <div class="row mb-5 mr-4 ml-4 align-top slide-in">
+    <div class="col-md-3 pt-4 business-spec">
+      <%= image_tag ("https://res.cloudinary.com/vg-ferronnerie/image/upload/v1589880031/001-steel_q9xf2t.png"), class: "img-responsive mb-3"%>
       <h2>Conception<br>artisanale</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
-    <div class="col-md-3 business-spec">
-      <%= image_tag ("https://res.cloudinary.com/dkrtmft3y/image/upload/v1588681066/004-ruler_sklv1q.png"), class: "img-responsive mb-3"%>
+    <div class="col-md-3 pt-4 business-spec">
+      <%= image_tag ("https://res.cloudinary.com/vg-ferronnerie/image/upload/v1589880004/004-ruler_mmzr5d.png"), class: "img-responsive mb-3"%>
       <h2>Réalisation<br>sur mesure</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
-    <div class="col-md-3 business-spec">
-      <%= image_tag ("https://res.cloudinary.com/dkrtmft3y/image/upload/v1588681051/002-crown_srkzvj.png"), class: "img-responsive mb-3"%>
+    <div class="col-md-3 pt-4 business-spec">
+      <%= image_tag ("https://res.cloudinary.com/vg-ferronnerie/image/upload/v1589880003/002-crown_ekqy5r.png"), class: "img-responsive mb-3"%>
       <h2>Service<br>de qualité</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
-    <div class="col-md-3 business-spec">
-      <%= image_tag ("https://res.cloudinary.com/dkrtmft3y/image/upload/v1588681068/003-help_wiledz.png"), class: "img-responsive mb-3"%>
+    <div class="col-md-3 pt-4 business-spec">
+      <%= image_tag ("https://res.cloudinary.com/vg-ferronnerie/image/upload/v1589880046/003-help_pfol5a.png"), class: "img-responsive mb-3"%>
       <h2>Conseils<br>personnalisés</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
   </div>
 </div>
 <hr id="artisan" class="mb-5">
 <div class="container artisan-presentation align-top slide-in">
-  <div class="row mb-5 pt-4 pb-4 mr-3 ml-3">
-    <div class="col-md-6 col-sm-12 presentation">
+  <div class="row mb-5 pt-4 pb-4 mr-1 ml-1">
+    <div class="col-md-6 col-sm-12 presentation text-center">
       <h2 class="mb-3">L'artisan, du dessin à la conception</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit at corrupti iusto amet quam doloremque ipsam illo, quo dolore quidem culpa qui. Distinctio iusto magnam eos velit dolor. Odit, reprehenderit.</p>
-      <%= image_tag ("https://res.cloudinary.com/dkrtmft3y/image/upload/v1588681058/logo-artisan_pef0jm.png"), class: "img-responsive mb-3 mt-3"%>
+      <p>Je m’appelle Valentin GUIOL. Après près de dix ans d'expérience dans le monde de la métallerie, passionné de mon travail, je me suis lancé à mon compte depuis Septembre 2019.<br>
+La ferronnerie amène à dessiner des plans, se projeter, réaliser et installer des oeuvres uniques pour ma plus grande satisfaction ainsi que celle de la clientèle.
+Ce métier est en perpétuel mouvement de mode. Du style ancien au design, la ferronnerie me permet de m’épanouir et de découvrir l’étendu de mes capacités.</p>
+      <%= image_tag ("https://res.cloudinary.com/vg-ferronnerie/image/upload/v1589880001/logo-artisan_o2djet.png"), class: "img-responsive mb-3 mt-3"%>
     </div>
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12 col-xs-12">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <%= image_tag ("https://images.unsplash.com/photo-1531220674280-b18cf8650cf3?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"), class: "parallax d-block w-100"%>
+            <%= image_tag ("https://res.cloudinary.com/vg-ferronnerie/image/upload/v1593030031/artisan-1_d7hq0m.jpg"), class: "d-block img-responsive w-100"%>
           </div>
           <div class="carousel-item">
-            <%= image_tag ("https://images.unsplash.com/photo-1533369257659-6132475f793c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=654&q=80"), class: "parallax d-block w-100"%>
-          </div>
-          <div class="carousel-item">
-            <%= image_tag ("https://images.unsplash.com/photo-1521493580600-41dedc446def?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80"), class: "parallax d-block w-100"%>
+            <%= image_tag ("https://res.cloudinary.com/vg-ferronnerie/image/upload/v1593030031/artisan-2_rejai0.jpg"), class: "d-block img-responsive w-100"%>
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

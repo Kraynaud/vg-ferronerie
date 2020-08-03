@@ -1,27 +1,76 @@
-.form {
-  margin-top: 98px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #575555;
-  font-weight: 600;
-  font-size: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+@media screen and (min-width: 1024px) {
+  .contact-page {
+    display: flex;
+    flex-direction: row;
 
-  #contact_description, #contact_objet, #contact_telephone, #contact_nom, #contact_prenom, #contact_email {
-    border: solid 1px #f77925;
-  }
-  h1{
-    color: #f77925;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 2rem;
-    letter-spacing: .15rem;
+    .form {
+      margin-right: 30px;
+      width: 60%;
+      padding: 25px;
+      margin-top: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #575555;
+      font-weight: 600;
+      font-size: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+      #contact_description, #contact_objet, #contact_telephone, #contact_nom, #contact_prenom, #contact_email {
+        border: solid 1px #f77925;
+      }
+      h1{
+        color: #f77925;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 2rem;
+        letter-spacing: .15rem;
+      }
+    }
+
+    .contact-photo {
+      margin-top: 150px;
+      height: auto;
+      width: 40%;
+    }
   }
 }
 
-.contact-photo {
-  margin-top: 98px;
-  height: auto;
-  width: auto;
+@media screen and (max-width: 1024px) {
+
+  .contact-page {
+    display: flex;
+    flex-direction: column;
+
+    .form {
+      width: 100%;
+      padding: 25px;
+      margin-top: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #575555;
+      font-weight: 600;
+      font-size: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+      #contact_description, #contact_objet, #contact_telephone, #contact_nom, #contact_prenom, #contact_email {
+        border: solid 1px #f77925;
+      }
+      h1{
+        color: #f77925;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 2rem;
+        letter-spacing: .15rem;
+      }
+    }
+
+    .contact-photo {
+      display:none;
+      height:0%;
+    }
+  }
 }
+
+

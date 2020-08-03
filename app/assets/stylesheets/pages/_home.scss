@@ -1,7 +1,7 @@
 // general body
 body {
   height: 100%!important;
-  background-image: url(https://res.cloudinary.com/dkrtmft3y/image/upload/v1588926883/redox_01__2X_exjamm.png);
+  background-image: url(https://res.cloudinary.com/vg-ferronnerie/image/upload/v1589880032/redox_01__2X_zi08zp.png);
 }
 
 body, a, h1, h2, h3, {
@@ -44,14 +44,14 @@ a {
 // banner
 
 .banner-home {
-  margin-top: 98px;
-  background-image: url("https://images.unsplash.com/photo-1550078882-40713cd1a12f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1069&q=80");
+  margin-top: 115px;
+  background-image: url("https://res.cloudinary.com/vg-ferronnerie/image/upload/v1593349044/banniere-home_fvzx5m.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 600px;
-  width: 100%;
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,7 +59,7 @@ a {
 
 .banner-content {
   color: black;
-  padding: 20px 25px;
+  padding: 25px 30px;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -74,14 +74,14 @@ a {
 }
 
 .business-spec img{
-  width: 60px;
+  width: 80px;
   height: auto;
 }
 
 // presentation
 
 .artisan-presentation{
-  background-image: url(https://res.cloudinary.com/dkrtmft3y/image/upload/v1588926883/redox_01__2X_exjamm.png);
+  background-image: url(https://res.cloudinary.com/vg-ferronnerie/image/upload/v1589880032/redox_01__2X_zi08zp.png);
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
@@ -91,31 +91,90 @@ a {
   justify-content: center;
   align-items: center;
   img {
-  height: 200px;
+  height: 150px;
   width: auto;
   }
 }
 
 // carousel
-.carousel-inner {
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
-}
 
 .carousel-item {
-  height: 600px;
+  height: 580px;
   width: 100%;
 }
 
 //cards
 
-.categorie-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 40px;
-  a{
-    text-decoration: none;
+@media screen and (min-width: 1720px) {
+  .categorie-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 40px;
+    a{
+      text-decoration: none;
+    }
   }
 }
+
+@media screen and (min-width: 1024px) and (max-width: 1720px){
+  .categorie-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    a{
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .categorie-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 40px;
+      a{
+        text-decoration: none;
+      }
+    }
+    .carousel-item {
+      height: 400px;
+      width: 100%;
+    }
+  }
+
+
+@media screen and (max-width: 768px) {
+  .categorie-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+    a{
+      text-decoration: none;
+    }
+  }
+
+  .banner-home {
+    margin-top: 110px;
+  }
+
+  .carousel-item {
+    height: 500px;
+    width: 100%;
+  }
+
+  .banner-content {
+    h1 {
+      font-size: 24px !important;
+    }
+    font-size: 14px;
+    color: black;
+    padding: 25px 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
 
 //card
 
