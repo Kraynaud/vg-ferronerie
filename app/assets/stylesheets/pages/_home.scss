@@ -116,7 +116,7 @@ a {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1720px){
   .categorie-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -127,23 +127,23 @@ a {
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .carousel-item {
-    height: 400px;
-    width: 100%;
-  }
-}
 
-@media screen and (min-width: 768px) {
-  .categorie-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 40px;
-    a{
-      text-decoration: none;
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .categorie-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 40px;
+      a{
+        text-decoration: none;
+      }
+    }
+    .carousel-item {
+      height: 400px;
+      width: 100%;
     }
   }
-}
+
 
 @media screen and (max-width: 768px) {
   .categorie-cards {
